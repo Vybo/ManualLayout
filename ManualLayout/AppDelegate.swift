@@ -11,12 +11,18 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    let window = UIWindow()
+
+    private let mainViewController = ViewController()
 
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+
+        window.rootViewController = mainViewController
+        window.makeKeyAndVisible()
+
         return true
     }
 
