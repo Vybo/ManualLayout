@@ -13,6 +13,7 @@
 		37C574D2234E138000ECD9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C574D0234E138000ECD9BE /* LaunchScreen.storyboard */; };
 		37C574DD234E138000ECD9BE /* ManualLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C574DC234E138000ECD9BE /* ManualLayoutTests.swift */; };
 		37C57506234E1D9200ECD9BE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C57505234E1D9200ECD9BE /* MainView.swift */; };
+		37C57509234E1F7500ECD9BE /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C57508234E1F7500ECD9BE /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		37C574DC234E138000ECD9BE /* ManualLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLayoutTests.swift; sourceTree = "<group>"; };
 		37C574DE234E138000ECD9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C57505234E1D9200ECD9BE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		37C57508234E1F7500ECD9BE /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				37C574D0234E138000ECD9BE /* LaunchScreen.storyboard */,
 				37C574D3234E138000ECD9BE /* Info.plist */,
 				37C57505234E1D9200ECD9BE /* MainView.swift */,
+				37C57507234E1F5C00ECD9BE /* Custom Views */,
 			);
 			path = ManualLayout;
 			sourceTree = "<group>";
@@ -94,6 +97,14 @@
 				37C574DE234E138000ECD9BE /* Info.plist */,
 			);
 			path = ManualLayoutTests;
+			sourceTree = "<group>";
+		};
+		37C57507234E1F5C00ECD9BE /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				37C57508234E1F7500ECD9BE /* RoundedButton.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				37C574CA234E137D00ECD9BE /* ViewController.swift in Sources */,
 				37C57506234E1D9200ECD9BE /* MainView.swift in Sources */,
 				37C574C8234E137D00ECD9BE /* AppDelegate.swift in Sources */,
+				37C57509234E1F7500ECD9BE /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
