@@ -10,13 +10,26 @@ import UIKit
 
 final class MainView: UIView {
 
-    let button = RoundedButton()
+    let collectionView: UICollectionView
+
+    private let collectionViewLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        return layout
+    }()
 
     init() {
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+
         super.init(frame: .zero)
 
-        addSubview(button)
-        setupButton()
+        collectionView.backgroundColor = .clear
+        addSubview(collectionView)
+
+        collectionView.register(
+            TitleWithRoundedButtonCollectionCell.self,
+            forCellWithReuseIdentifier: String(describing: TitleWithRoundedButtonCollectionCell.self)
+        )
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -25,24 +38,6 @@ final class MainView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
-        let buttonWidth: CGFloat = bounds.width / 3 * 2
-        let buttonHeight: CGFloat = 36
-
-        button.frame = CGRect(
-            x: bounds.width / 2 - buttonWidth / 2,
-            y: bounds.height / 2 - buttonHeight / 2,
-            width: buttonWidth,
-            height: buttonHeight
-        )
-    }
-
-    private func setupButton() {
-        button.borderColor = .blue
-        button.borderWidth = 1
-        button.borderCornerRadius = 6
-
-        button.setTitle("Hit me!", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+        collectionView.frame = bounds
     }
 }

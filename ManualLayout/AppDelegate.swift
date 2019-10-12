@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let window = UIWindow()
+    var window: UIWindow?
 
     private let mainViewController = ViewController()
 
@@ -20,30 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
 
-        window.rootViewController = mainViewController
-        window.makeKeyAndVisible()
+        window = UIWindow()
+        window?.rootViewController = mainViewController
+        window?.makeKeyAndVisible()
 
         return true
-    }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-
     }
 }
 

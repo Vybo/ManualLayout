@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3755263C2352046A00C4D548 /* TitleWithRoundedButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755263B2352046A00C4D548 /* TitleWithRoundedButtonCollectionCell.swift */; };
+		3755263F235204DF00C4D548 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755263E235204DF00C4D548 /* UIView.swift */; };
+		3755265F2352092000C4D548 /* CountingCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755265E2352092000C4D548 /* CountingCollectionDataSource.swift */; };
 		37C574C8234E137D00ECD9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C574C7234E137D00ECD9BE /* AppDelegate.swift */; };
 		37C574CA234E137D00ECD9BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C574C9234E137D00ECD9BE /* ViewController.swift */; };
 		37C574CF234E138000ECD9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C574CE234E138000ECD9BE /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3755263B2352046A00C4D548 /* TitleWithRoundedButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithRoundedButtonCollectionCell.swift; sourceTree = "<group>"; };
+		3755263E235204DF00C4D548 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3755265E2352092000C4D548 /* CountingCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingCollectionDataSource.swift; sourceTree = "<group>"; };
 		37C574C4234E137D00ECD9BE /* ManualLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C574C7234E137D00ECD9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C574C9234E137D00ECD9BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3755263D235204D600C4D548 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3755263E235204DF00C4D548 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		37C574BB234E137D00ECD9BE = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +93,14 @@
 		37C574C6234E137D00ECD9BE /* ManualLayout */ = {
 			isa = PBXGroup;
 			children = (
+				3755263D235204D600C4D548 /* Extensions */,
 				37C574C7234E137D00ECD9BE /* AppDelegate.swift */,
+				37C57505234E1D9200ECD9BE /* MainView.swift */,
 				37C574C9234E137D00ECD9BE /* ViewController.swift */,
+				3755265E2352092000C4D548 /* CountingCollectionDataSource.swift */,
 				37C574CE234E138000ECD9BE /* Assets.xcassets */,
 				37C574D0234E138000ECD9BE /* LaunchScreen.storyboard */,
 				37C574D3234E138000ECD9BE /* Info.plist */,
-				37C57505234E1D9200ECD9BE /* MainView.swift */,
 				37C57507234E1F5C00ECD9BE /* Custom Views */,
 			);
 			path = ManualLayout;
@@ -103,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				37C57508234E1F7500ECD9BE /* RoundedButton.swift */,
+				3755263B2352046A00C4D548 /* TitleWithRoundedButtonCollectionCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -208,9 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C574CA234E137D00ECD9BE /* ViewController.swift in Sources */,
+				3755263C2352046A00C4D548 /* TitleWithRoundedButtonCollectionCell.swift in Sources */,
+				3755263F235204DF00C4D548 /* UIView.swift in Sources */,
 				37C57506234E1D9200ECD9BE /* MainView.swift in Sources */,
 				37C574C8234E137D00ECD9BE /* AppDelegate.swift in Sources */,
 				37C57509234E1F7500ECD9BE /* RoundedButton.swift in Sources */,
+				3755265F2352092000C4D548 /* CountingCollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

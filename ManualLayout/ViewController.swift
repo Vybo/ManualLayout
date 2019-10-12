@@ -12,13 +12,16 @@ class ViewController: UIViewController {
 
     private let mainView = MainView()
 
+    private let dataSource = CountingCollectionDataSource(numberOfItems: 20)
+
     init() {
         super.init(nibName: nil, bundle: nil)
 
         view = mainView
         mainView.backgroundColor = .white
 
-        setupEvents()
+        mainView.collectionView.dataSource = dataSource
+        mainView.collectionView.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -27,15 +30,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @objc func buttonTapped(_ sender: UIButton) {
-        presentAlert(title: "Ouch", message: "You hit me!")
-    }
-
-    private func setupEvents() {
-        mainView.button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
 
     private func presentAlert(title: String, message: String) {
@@ -45,3 +39,37 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Nothing here for now, because we only want to react to button taps.
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+
+        let width = collectionView.bounds.width
+        let height: CGFloat = 60
+        return CGSize(width: width, height: height)
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        willDisplay cell: UICollectionViewCell,
+        forItemAt indexPath: IndexPath
+    ) {
+
+        if let cell = cell as? TitleWithRoundedButtonCollectionCell {
+            cell.configure(title: "I'm a cell number \(indexPath.item)", buttonTitle: "Hit me!")
+            
+            cell.buttonTappedHandler = { [weak self] in
+                self?.presentAlert(title: "You hit me!", message: "You hit a button of cell no. \(indexPath.item).")
+            }
+        }
+    }
+}
